@@ -2,18 +2,52 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <title>EVERYTHING EVERYWHERE ALL AT ONCE</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
+            const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade');
+        
+            botaoDeAcessibilidade.addEventListener('click', function () {
+                botaoDeAcessibilidade.classList.toggle('rotacao-botao');
+                opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
+            });
+        
+            const aumentaFonteBotao = document.getElementById('aumentar-fonte');
+            const diminuiFonteBotao = document.getElementById('diminuir-fonte');
+        
+            let tamanhoAtualFonte = 1;
+        
+            aumentaFonteBotao.addEventListener('click', function () {
+                tamanhoAtualFonte += 0.1;
+                document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
+            });
+        
+            diminuiFonteBotao.addEventListener('click', function () {
+                tamanhoAtualFonte -= 0.1;
+                document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>EVERYTHING EVERYWHERE ALL AT ONCE</h1>
-    <h2>(Tradução: Tudo em Todo o Lugar ao Mesmo Tempo)</h2>
-    <img src="ttlaomt.jpg" alt=" " width= 50% height= 50%>
-    <h4>(A imagem é uma cena do filme, mostrando Evelyn Wang (Michelle Yeoh) com uma expressão de desespero.) </h4>
-    <h3> Evelyn Wang (interpretada com primor por Michelle Yeoh) é uma imigrante chinesa que vive com sua família nos EUA e administra uma lavanderia. <br>
+    <div id="acessibilidade" class="menu-acessibilidade">
+        <button id="botao-acessibilidade" class="btn btn-primary rotacao-botao fw-bold">Acessibilidade</button>
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+            <button id="aumentar-fonte" class="btn btn-primary fw-bold">A +</button>
+            <button id="diminuir-fonte" class="btn btn-primary fw-bold">A -</button>
+        </div>
+    </div> <!-- Properly closed the div here -->
+    <h1 class="d-flex justify-content-between align-items-center">EVERYWHERE ALL AT ONCE</h1>
+    <h2 class="d-flex justify-content-between align-items-center">(Tradução: Tudo em Todo o Lugar ao Mesmo Tempo)</h2>
+    <img src="ttlaomt.jpg" alt=" " width="50%" height="50%">
+    <h4 class="d-flex justify-content-between align-items-center">(A imagem é uma cena do filme, mostrando Evelyn Wang (Michelle Yeoh) com uma expressão de desespero.)</h4>
+    <h3 class="d-flex justify-content-between align-items-center">Evelyn Wang (interpretada com primor por Michelle Yeoh) é uma imigrante chinesa que vive com sua família nos EUA e administra uma lavanderia. <br>
         Extremamente frustrada, ela não consegue ver beleza e significado em sua vida.</h3>
-    <h3>A filha Joy (Stephanie Hsu) e o marido Waymond (Ke Huy Quan) sentem o desprezo de Evelyn, que também precisa lidar <br>
+    <h3 class="d-flex justify-content-between align-items-center">A filha Joy (Stephanie Hsu) e o marido Waymond (Ke Huy Quan) sentem o desprezo de Evelyn, que também precisa lidar <br>
         com a vinda de seu pai Gong Gong (James Hong) e a relação complicada com ele, além de grandes problemas financeiros com a receita federal.</h3>
-    <h3>Quando Evelyn, Waymond e Gong Gong estão no elevador do prédio da Receita Federal, prestes a ter uma conversa <br>
+    <h3 class="d-flex justify-content-between align-items-center">Quando Evelyn, Waymond e Gong Gong estão no elevador do prédio da Receita Federal, prestes a ter uma conversa <br>
         definitiva com auditora fiscal Deirdre Beaubeirdre (Jamie Lee Curtis), algo excepcional acontece.</h3>
 </body>
 </html>
